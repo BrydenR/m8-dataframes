@@ -14,6 +14,7 @@ for(index in 1:length(seahawks)) {
   data$diff[index] <- data[index, 'points.scored']-data[index,'points.allowed']
 }
 # Create a new column "won" which is TRUE if the Seahawks wom
+# dat$won <- data$diff > 0
 for(index in 1:length(seahawks)) {
   data$won[index] <- data[index, 'diff'] > 0
 }
