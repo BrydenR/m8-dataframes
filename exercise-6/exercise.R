@@ -40,8 +40,8 @@ most.popular.name.1994 = MostPopular('1994')
 # a sentence with how popular that name was in that year
 HowPopular <- function(my.name, my.year) {
   
-  prop.year <- as.vector(prop[year == my.year] && name[name == my.name])
+  prop.year <- as.vector(female.names[female.names['name'] == name && female.names[year] == my.year])
   return(paste(name, " was ", prop.year, " in ", my.year))
 }
 # How popular was the name 'Laura' in 1995
-Laura.1995 = How.Popular('Laura', '1995')
+Laura.1995 = HowPopular('Laura', '1995')
